@@ -4,7 +4,7 @@ My personal portfolio website demonstrating my skills and experience as a develo
 
 ## Features
 - Responsive design
-- Custom cursor effects
+- Custom cursor effect
 - Unique text animations
 - Modern grid layout
 - Interactive UI elements
@@ -17,7 +17,7 @@ My personal portfolio website demonstrating my skills and experience as a develo
 - Google Fonts (Space Mono)
 
 ## Live Demo
-The site is live at: [ahrimaz.github.io/portfolio](https://ahrimaz.github.io/portfolio)
+The site is live at: [ahrimaz.github.io](https://ahrimaz.github.io)
 
 ## Local Development
 To run this project locally:

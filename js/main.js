@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         follower.style.top = e.clientY + 'px';
     });
 
-    // Add hover effect for links and buttons
+    // hover effect for links and buttons
     const links = document.querySelectorAll('a');
     links.forEach(link => {
         link.addEventListener('mouseenter', () => {

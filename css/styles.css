@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none; /* We'll create a custom cursor */
+    cursor: none; /* custom cursor in use */
 }
 
 body {
@@ -26,7 +26,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Custom cursor */
+/* custom cursor */
 .cursor {
     width: 20px;
     height: 20px;
@@ -47,7 +47,7 @@ body {
     z-index: 9999;
 }
 
-/* Glitch effect for text */
+/* glitch effect for text */
 .glitch {
     position: relative;
     text-shadow: 0.05em 0 0 var(--primary-color),
