@@ -1,11 +1,11 @@
 # Eric Stanard - Developer Portfolio
 
-A modern, stark portfolio website showcasing my work as a developer. Built with HTML, CSS, and JavaScript.
+My personal portfolio website demonstrating my skills and experience as a developer.
 
 ## Features
 - Responsive design
 - Custom cursor effects
-- Glitch text animations
+- Unique text animations
 - Modern grid layout
 - Interactive UI elements
 
@@ -17,7 +17,7 @@ A modern, stark portfolio website showcasing my work as a developer. Built with 
 - Google Fonts (Space Mono)
 
 ## Live Demo
-The site is live at: [your-username.github.io/portfolio](https://your-username.github.io/portfolio)
+The site is live at: [ahrimaz.github.io/portfolio](https://ahrimaz.github.io/portfolio)
 
 ## Local Development
 To run this project locally:
