@@ -1,0 +1,233 @@
+:root {
+    --primary-color: #FF0066;
+    --secondary-color: #00FF66;
+    --text-color: #FFFFFF;
+    --bg-color: #000000;
+    --accent-color: #3300FF;
+    --grid-size: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none; /* We'll create a custom cursor */
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+    background-image: 
+        linear-gradient(rgba(255, 0, 102, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 102, 0.1) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+    overflow-x: hidden;
+}
+
+/* Custom cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.cursor-follower {
+    width: 8px;
+    height: 8px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Glitch effect for text */
+.glitch {
+    position: relative;
+    text-shadow: 0.05em 0 0 var(--primary-color),
+                -0.025em -0.05em 0 var(--secondary-color),
+                0.025em 0.05em 0 var(--accent-color);
+    animation: glitch 500ms infinite;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 0, 102, 0.3);
+}
+
+.nav-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--secondary-color);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 0 10vw;
+}
+
+.hero-content {
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 8vw;
+    margin-bottom: 1rem;
+    line-height: 1;
+    mix-blend-mode: difference;
+}
+
+.highlight {
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 40%;
+    background: var(--secondary-color);
+    left: -10%;
+    bottom: 0;
+    z-index: -1;
+    transform: skew(-15deg);
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.primary {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.secondary {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn:hover {
+    transform: scale(1.05) skew(-5deg);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 var(--primary-color),
+                    -0.025em -0.05em 0 var(--secondary-color),
+                    0.025em 0.05em 0 var(--accent-color);
+    }
+    14% {
+        text-shadow: 0.05em 0 0 var(--primary-color),
+                    -0.025em -0.05em 0 var(--secondary-color),
+                    0.025em 0.05em 0 var(--accent-color);
+    }
+    15% {
+        text-shadow: -0.05em -0.025em 0 var(--primary-color),
+                    0.025em 0.025em 0 var(--secondary-color),
+                    -0.05em -0.05em 0 var(--accent-color);
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 var(--primary-color),
+                    0.025em 0.025em 0 var(--secondary-color),
+                    -0.05em -0.05em 0 var(--accent-color);
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 var(--primary-color),
+                    0.05em 0 0 var(--secondary-color),
+                    0 -0.05em 0 var(--accent-color);
+    }
+    99% {
+        text-shadow: 0.025em 0.05em 0 var(--primary-color),
+                    0.05em 0 0 var(--secondary-color),
+                    0 -0.05em 0 var(--accent-color);
+    }
+    100% {
+        text-shadow: -0.025em 0 0 var(--primary-color),
+                    -0.025em -0.025em 0 var(--secondary-color),
+                    -0.025em -0.05em 0 var(--accent-color);
+    }
+} 
