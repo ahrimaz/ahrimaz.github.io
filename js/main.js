@@ -23,4 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
             follower.style.transform = 'scale(1)';
         });
     });
+
+    // Theme switching
+    const themeSwitch = document.querySelector('.theme-switch');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.setAttribute('data-theme', savedTheme);
+        themeSwitch.checked = savedTheme === 'professional';
+    }
+
+    themeSwitch.addEventListener('change', (e) => {
+        if (e.target.checked) {
+            body.setAttribute('data-theme', 'professional');
+            localStorage.setItem('theme', 'professional');
+        } else {
+            body.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'creative');
+        }
+    });
 }); 
